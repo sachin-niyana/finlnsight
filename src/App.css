@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.switch {
+  display: inline-block;
+  position: relative;
+  width: 44px;
+  height: 24px;
+  border-radius: 20px;
+  background: #66707a;
+  transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  vertical-align: middle;
+  cursor: pointer;
+}
+.switch-toggle {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 1.5px;
+  width: 20px;
+  height: 20px;
+  background: #fafafa;
+  border-radius: 50%;
+  transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.switch-on {
+  background: #3878ff;
+}
+.switch-on .switch-toggle {
+  left: 21.5px;
+  background: #fff;
+}
+.switch-off {
+  background: #66707a;
+}
+
+.search-input {
+  outline: none;
+  border: none;
+}
