@@ -4,16 +4,21 @@ import { Cross, Deals, File, Home, Line, Security, Setting } from "./icon";
 
 const Sidebar = () => {
   const [theme, setTheme] = useState(false);
-  const [showSidebar, setShowSidebar] = useState(false);
   const toggleSwitch = () => {
     setTheme(!theme);
   };
+  const [showSidebar, setShowSidebar] = useState(false);
+  if (showSidebar) {
+    document.body.classList.add("overflow-hidden");
+  } else {
+    document.body.classList.remove("overflow-hidden");
+  }
   return (
     <>
       <div className="m-0">
         <div
           onClick={() => setShowSidebar(true)}
-          className="absolute md:hidden left-3 sm:top-12 top-10"
+          className="absolute md:hidden left-3 sm:top-12 top-12"
         >
           <Home />
         </div>
@@ -45,7 +50,7 @@ const Sidebar = () => {
 
             <p className="font-Jost text-gray font-medium text-lg">Setting</p>
           </div>
-          <p className="lg:ps-8 md:ps-5 ps-8 font-Jost pt-40 text-gray font-normal text-lg">
+          <p className="lg:ps-8 md:ps-5 ps-8 font-Jost md:pt-40 pt-20 text-gray font-normal text-lg">
             OTHER
           </p>
 

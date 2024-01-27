@@ -19,9 +19,9 @@ export const Search = () => {
 export const Notification = () => {
   return (
     <svg
-      className="sm:w-[52px] sm:h-[52px]"
-      width="32"
-      height="3x2"
+      // className="w-[52px] sm:h-[52px]"
+      width="52"
+      height="52"
       viewBox="0 0 52 52"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

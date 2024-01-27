@@ -1,12 +1,14 @@
+import { Route, Router, Routes } from "react-router-dom";
 import "./App.css";
-import FileUpload from "./view/dashboard/Abc";
 import NewFile from "./view/dashboard/NewFile";
+import Navbar from "./components/Common/Navbar";
 
 function App() {
   return (
     <>
-      {/* <NewFile /> */}
-      <FileUpload />
+      <Routes>
+        <Route path="/" element={<NewFile />} />
+      </Routes>
     </>
   );
 }
